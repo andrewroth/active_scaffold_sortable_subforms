@@ -6,6 +6,8 @@ This plugin enables enables ajax drag and drop sorting for subforms.  Can work a
 
 It works by hiding the position field display, and adding javascript to reset the value in each position each time the order is changed.  So this is counter to the usual "reorder" method that dragdrop sortables usually use.  This is intentional.  It allows new items that aren't in the database yet to be positioned, and for changes to take effect only when 'Update' is pressed, which is how the rest of the subform operates.
 
+Note I add the patch to enable subforms to use helper overrides, and build on top of that.  (see http://code.google.com/p/activescaffold/issues/detail?id=77)
+
 h2. Installation
 
 You'll need at least ActiveScaffold 1.1.1 to use this, and probably rails 2.0
