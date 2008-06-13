@@ -42,6 +42,7 @@ end
 
 # id           integer
 # name         string(255)
+# entry_id     integer
 # position     integer
 
 class Item < ActiveRecord::Base
@@ -62,6 +63,7 @@ end
 </pre>
 
 and layout (note the javascript as_dd_reorder.js include)
+# entry_id     integer
 
 <pre>
 # app/views/layouts/application.rhtml
@@ -80,7 +82,7 @@ and layout (note the javascript as_dd_reorder.js include)
 
 h4. Step 3
 
-Add include and define to helper.
+Add one include and one define to helper, see below.
 
 The active_scaffold_sortable_subform expects parameters of the form :subform_model => :subform_column
 
@@ -104,13 +106,13 @@ h2. Contributing
 
 Fork, hack, push, and request a pull:
 
-http://github.com/activescaffold/active_scaffold_sortable/
+http://github.com/andrewroth/active_scaffold_sortable_subforms/
 
 h2. Author
 
 Contact me:
 <pre>
-  Andrew Roth
+  Andrew Roth - andrewroth@gmail.com
 </pre>
 
 Thanks to Tim Harper for active_scaffold_sortable:
