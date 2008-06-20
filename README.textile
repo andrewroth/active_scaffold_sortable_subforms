@@ -1,5 +1,7 @@
 h1. Drag-Drop Sortable Subforms for ActiveScaffold
 
+Currently, this plugin is not compatible with rails 2.1, due to some outstanding compatibility issues with ActiveScaffold.
+
 h2. Overview
 
 This plugin enables enables ajax drag and drop sorting for subforms.  Can work alongside the active_scaffold_sortable plugin, which provides similar functionality for the top level.
@@ -10,12 +12,9 @@ Note I add the patch to enable subforms to use helper overrides, and build on to
 
 h2. Installation
 
-You'll need at least ActiveScaffold 1.1.1 to use this, and probably rails 2.0
+You'll need at least ActiveScaffold 1.1.1 to use this, and rails 2.0.  This demo is set to use 2.0.2.  "gem install -v=2.0.2 rails" if you don't have it already.
 
 <pre>
-# rails 2.1
-script/plugin install git://github.com/activescaffold/active_scaffold_sortable.git
-
 # rails 2.0
 git clone git://github.com/activescaffold/active_scaffold_sortable_subforms.git vendor/plugins/active_scaffold_sortable_subforms
 </pre>
