@@ -12,13 +12,11 @@ Note I add the patch to enable subforms to use helper overrides, and build on to
 
 h2. Installation
 
-You'll need at least ActiveScaffold 1.1.1 to use this, and rails 2.0.  This demo is set to use 2.0.2.  "gem install -v=2.0.2 rails" if you don't have it already.
+You'll need at least rails 2.2.
 
 <pre>
-# rails 2.0
 git clone git://github.com/activescaffold/active_scaffold_sortable_subforms.git vendor/plugins/active_scaffold_sortable_subforms
 </pre>
-
 
 h2. Usage
 
@@ -61,6 +59,12 @@ Create your scaffold controller
 class EntryController < ApplicationController
   active_scaffold
 end
+
+# app/controllers/item_controller.rb
+
+class ItemController < ApplicationController
+  active_scaffold
+end
 </pre>
 
 and layout (note the javascript as_dd_reorder.js include)
@@ -95,7 +99,7 @@ In this case:
 module EntriesHelper
   include ActiveScaffoldSortableSubforms
 
-  active_scaffold_sortable_subform :items => :position
+  active_scaffold_sortable_subform :item => :position
 end
 </pre>
 
