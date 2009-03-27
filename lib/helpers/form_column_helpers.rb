@@ -1,7 +1,7 @@
 module ActiveScaffold
   module Helpers
     # Helpers that assist with the rendering of a Form Column
-    module FormColumns
+    module FormColumnHelpers
 
       # the naming convention for overriding form fields with helpers
       def override_form_field(column)
