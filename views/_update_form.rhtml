@@ -9,9 +9,10 @@ if request.xhr?
                            :method => :put
   else
     form_remote_tag :url => url_options,
-                    :before => "as_dd_clear_empty_new_records($('\#{element_form_id(:action => :update)}'))",
                     :after => "$('#{loading_indicator_id(:action => :update, :id => params[:id])}').style.visibility = 'visible'; Form.disable('#{element_form_id(:action => :update)}');",
                     :complete => "$('#{loading_indicator_id(:action => :update, :id => params[:id])}').style.visibility = 'hidden'; Form.enable('#{element_form_id(:action => :update)}');",
++                   :before => "as_dd_clear_empty_new_records($('#{element_form_id(:action => :update)}'))",
+
                     :failure => "ActiveScaffold.report_500_response('#{active_scaffold_id}')",
                     :html => {
                       :href => url_for(url_options),
