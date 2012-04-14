@@ -15,7 +15,8 @@ h2. Installation
 You'll need at least rails 2.2.
 
 <pre>
-git clone git://github.com/activescaffold/active_scaffold_sortable_subforms.git vendor/plugins/active_scaffold_sortable_subforms
+ruby script/plugin install git://github.com/activescaffold/active_scaffold.git -r rails-2.3
+ruby script/plugin install git://github.com/andrewroth/active_scaffold_sortable_subforms
 </pre>
 
 h2. Usage
@@ -23,6 +24,10 @@ h2. Usage
 h4. Step 1
 
 Create a model A with relation B, and column named 'position' on B:
+
+<pre>
+ruby script/generate model entry title:string birthdyate:date
+</pre>
 
 <pre>
 # app/models/entry.rb
@@ -34,6 +39,10 @@ Create a model A with relation B, and column named 'position' on B:
 class Entry < ActiveRecord::Base
   has_many :items, :order => :position
 end
+</pre>
+
+<pre>
+ruby script/generate model item name:string entry_id:integer position:integer
 </pre>
 
 <pre>
@@ -56,13 +65,13 @@ Create your scaffold controller
 <pre>
 # app/controllers/entries_controller.rb
 
-class EntryController < ApplicationController
+class EntriesController < ApplicationController
   active_scaffold
 end
 
-# app/controllers/item_controller.rb
+# app/controllers/items_controller.rb
 
-class ItemController < ApplicationController
+class ItemsController < ApplicationController
   active_scaffold
 end
 </pre>
@@ -103,9 +112,7 @@ module EntriesHelper
 end
 </pre>
 
-h2. Support
-
-If you have issues installing the plugin, email andrewroth@gmail.com.  If the official active_scaffold group wants to take ownership and provide support they're welcome to :)
+http://localhost:3000/entries and create a new entry.  You should see Items there with a position drag image.
 
 h2. Contributing
 
