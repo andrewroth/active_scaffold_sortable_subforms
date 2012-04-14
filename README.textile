@@ -12,7 +12,7 @@ Note I add the patch to enable subforms to use helper overrides, and build on to
 
 h2. Installation
 
-You'll need at least rails 2.2.
+You'll need at least rails 2.3.
 
 <pre>
 ruby script/plugin install git://github.com/activescaffold/active_scaffold.git -r rails-2.3
